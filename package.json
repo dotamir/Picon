@@ -1,0 +1,26 @@
+{
+  "name": "picon",
+  "version": "1.0.0",
+  "description": "Picon - Simple and usefull icons.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/iamir/Picon.git"
+  },
+  "keywords": [
+    "simple",
+    "icons",
+    "css",
+    "html",
+    "jade",
+    "sass",
+    "usefull",
+    "design",
+    "ui"
+  ],
+  "author": "Amirhossein Eslami (dot_amir)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/iamir/Picon/issues"
+  },
+  "homepage": "https://gitlab.com/iamir/Picon#README"
+}
