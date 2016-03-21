@@ -17,7 +17,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/css/main.css': 'static/css/main.scss'
+          'css/picon.css': 'Picon.scss'
         }
       }
     },
@@ -42,10 +42,9 @@ module.exports = function(grunt) {
     watch: {
       options: {
         nospawn: true,
-        livereload: true
       },
       css: {
-        files: 'static/css/sources/*.scss',
+        files: 'sass/_picon.scss',
         tasks: ['sass'],
       },
       src: {
@@ -61,7 +60,7 @@ module.exports = function(grunt) {
         dev: {
           bsFiles: {
             src : [
-              'dist/css/*.css',
+              'css/*.css',
               '*.html'
             ]
           },
