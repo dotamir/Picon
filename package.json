@@ -4,7 +4,7 @@
   "description": "Picon - Simple and usefull icons.",
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/iamir/Picon.git"
+    "url": "git+https://github.com/dotamir/Picon.git"
   },
   "keywords": [
     "simple",
@@ -20,7 +20,7 @@
   "author": "Amirhossein Eslami (dot_amir)",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/iamir/Picon/issues"
+    "url": "https://github.com/dotamir/Picon/issues"
   },
-  "homepage": "https://gitlab.com/iamir/Picon#README"
+  "homepage": "https://github.com/dotamir/Picon#README"
 }
