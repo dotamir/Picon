@@ -1,3 +1,4 @@
-# Picon
-
-##Will be soon completed ...
+## Picon
+ Will be soon completed ...
+## License
+Licensed under MIT.
