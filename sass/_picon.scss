@@ -325,7 +325,7 @@ $size: 32px;
     width: 28px;height: 28px;border: 4px solid $base-color;@include border-radius(100%);
     &::before, &::after{@extend .positions;background: $base-color;}
     &::before{
-			width: 4px;height: 17px;top: -10px;left: 10px;border: 2px solid #fff;
+			width: 4px;height: 17px;top: -10px;left: 10px;border: 2px solid lighten($base-color, 100%);
     }
     &::after{
     }
@@ -339,6 +339,18 @@ $size: 32px;
 			width: 0;height: 0;left: floor($size/10.666);top: -(floor($size/5.333));border-style: solid;border-width: floor($size/2.285) 0 0 floor($size/2.285);border-color: $base-color transparent $base-color;@include transform(rotate(-45deg));
     }
     &::after{
-			width: floor($size/3.2);height: floor($size/3.2);background: $base-color;
+			width: 6px;height: 6px;left: floor($size/4.776);top: 0px; background: lighten($base-color, 100%);@include border-radius(100%);
+    }
+}
+
+/* picon-arrow-up */
+.picon-arrow-up{
+    width: $size;height: $size;left: 5px;//@include border-radius(3px);//@include transform(rotate(45deg));
+    &::before, &::after{@extend .positions;}
+    &::before{
+			width: $size/2;height: 20px;left: 8px;top: 12px;background: $base-color;
+		}
+    &::after{
+			width: 0;height: 0;top: 0;border-style: solid;border-width: 0px 16px 16px 16px;border-color: $base-color transparent $base-color;
     }
 }

@@ -5,7 +5,7 @@
   / ___ \  | |  | | | | |  _ <   | |___  \__ \ | | | (_| | | | | | | | | |
  /_/   \_\ |_|  |_| |_| |_| \_\  |_____| |___/ |_|  \__,_| |_| |_| |_| |_|
 
- iAMiR(dot_amir) - Feb 2016
+ Amirhossein(dot_amir) - Feb 2016
 */
 
 module.exports = function(grunt) {
