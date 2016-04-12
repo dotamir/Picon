@@ -22,5 +22,13 @@
   "bugs": {
     "url": "https://github.com/dotamir/Picon/issues"
   },
-  "homepage": "https://github.com/dotamir/Picon#README"
+  "homepage": "https://github.com/dotamir/Picon#README",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-jade": "^0.5.1",
+    "grunt-sass": "^1.1.0"
+  }
 }
