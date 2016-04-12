@@ -365,3 +365,15 @@ $size: 32px;
 			width: 0;height: 0;top: 0;border-style: solid;border-width: 0px 16px 16px 16px;border-color: $base-color transparent $base-color;
     }
 }
+
+/* picon-arrow-down */
+.picon-arrow-down{
+  width: $size;height: $size;left: 5px;//@include border-radius(3px);//@include transform(rotate(45deg));
+  &::before, &::after{@extend .positions;}
+  &::before{
+    width: $size/2;height: 20px;left: 8px;background: $base-color;
+  }
+  &::after{
+    width: 0;height: 0;bottom: 0;border-style: solid;border-width: 16px 16px 0 16px;border-color: $base-color transparent $base-color;
+  }
+}
