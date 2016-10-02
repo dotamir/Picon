@@ -1,10 +1,6 @@
-/node_modules
-/public/storage
-/.vscode/settings.json
-/public/js/app.js
-/public/css/app.css.map
-/vendor
-/.idea
-Homestead.json
-Homestead.yaml
-.env
+node_modules
+dist
+.tmp
+.sass-cache
+*.css.map
+.idea
