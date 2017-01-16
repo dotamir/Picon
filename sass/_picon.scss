@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis');
 // Mixins :
 // ======
 @mixin transform($string){
@@ -12,6 +13,14 @@
        -moz-border-radius: $radius;
          -o-border-radius: $radius;
             border-radius: $radius;
+}
+
+@function oppsite-color($color) {
+  @if (lightness($color) > 50) {
+    @return darken($base-color, 100%); // Lighter backgorund, return dark color
+  } @else {
+    @return lighten($base-color, 100%); // Darker background, return light color
+  }
 }
 
 // Variables :
@@ -88,7 +97,7 @@ $size: 32px;
 /* clock2 */
 .picon-clock2{
     width: ($size - $size/3.2) + ($size/8);height: ($size - $size/3.2) + ($size/8);background: $base-color;border: $size/10 solid $base-color;@include border-radius(100%);
-    &::before, &::after{@extend .positions;background: lighten($base-color, 100%)}
+    &::before, &::after{@extend .positions;background: oppsite-color($base-color)}
     &::before{
         width: floor($size/10);height: $size/2.9;top: $size/8;left: $size/2.6;
     }
@@ -225,6 +234,16 @@ $size: 32px;
     &::after{
     }
 }
+/* menu2-circle */
+.picon-menu2-circle {
+    width: $size - $size/1.2;height: ($size - $size/3.2) + $size/16;
+    &::before, &::after{@extend .positions; @include border-radius(20px);}
+    &::before{
+        width: floor($size/6.4);height: floor($size/6.4);top: $size/16;left: $size/$size;background: $base-color;box-shadow: 0 $size/4 0 $base-color, 0 $size/2 0 $base-color;
+    }
+    &::after{
+    }
+}
 
 /* contrast */
 .picon-contrast{
@@ -261,14 +280,39 @@ $size: 32px;
     }
 }
 
+/* poker-dark */
+.picon-poker-dark {
+    width: ($size - $size/3.2) + ($size/8);height: ($size - $size/3.2) + ($size/8);background: $base-color;border: $size/16 + $size/$size solid $base-color;@include border-radius(100%);
+    &::before, &::after{@extend .positions;background: oppsite-color($base-color)}
+    &::before{
+        width: $size/8;height: $size/8;top: $size/4 - $size/$size;left: $size/6.4;@include border-radius(20px);box-shadow: $size/3.2 + $size/$size 0 0 oppsite-color($base-color);
+    }
+    &::after{
+        width: $size/3.2 + $size/16;height: $size/16;top: $size/2 + $size/$size;left: $size/4 - $size/$size;
+    }
+}
+
 /* wonder */
 .picon-wonder{
     width: ($size - $size/3.2) + ($size/8);height: ($size - $size/3.2) + ($size/8);border: $size/16 + $size/$size solid $base-color;@include border-radius(100%);
-    &::before, &::after{@extend .positions;background: $base-color;}
+    &::before, &::after{@extend .positions;background: $base-color}
     &::before{
         width: $size/8;height: $size/8;top: $size/4 - $size/$size;left: $size/6.4;@include border-radius(20px);box-shadow: $size/3.2 + $size/$size 0 0 $base-color;
     }
     &::after{
+        width: $size/3.2 + $size/16;height: $size/16;top: $size/2 + $size/$size;left: $size/4 - $size/$size;@include transform(rotate(-20deg));
+    }
+}
+
+/* wonder-dark */
+.picon-wonder-dark {
+	// TODO: delete border
+    width: ($size - $size/3.2) + ($size/8);height: ($size - $size/3.2) + ($size/8);background: $base-color;border: $size/16 + $size/$size solid $base-color;@include border-radius(100%);
+    &::before, &::after {@extend .positions;background: oppsite-color($base-color);}
+    &::before {
+        width: $size/8;height: $size/8;top: $size/4 - $size/$size;left: $size/6.4;@include border-radius(20px);box-shadow: $size/3.2 + $size/$size 0 0 oppsite-color($base-color);
+    }
+    &::after {
         width: $size/3.2 + $size/16;height: $size/16;top: $size/2 + $size/$size;left: $size/4 - $size/$size;@include transform(rotate(-20deg));
     }
 }
@@ -456,4 +500,80 @@ $size: 32px;
   &::after {
     width: $size/1.3;height: $size/1.3;background: $base-color;@include transform(rotate(24deg));
   }
+}
+
+/* picon-bubble */
+.picon-bubble {
+	width: floor($size/5);height: floor($size/5);background: $base-color;@include border-radius(20px);
+	&::before, &::after { @extend .positions; }
+	&::after {
+		content: '';
+		display: block;
+		position: relative;
+		left: floor($size/4.571);
+		width: $size/8;
+		height: $size/8;
+		background-color: $base-color;
+		@include border-radius(20px);
+	}
+	&::before {
+		content: '';
+		display: block;
+		position: relative;
+		top: -(floor($size/3.555));
+		left: floor($size/5.333);
+		width: floor($size/4.571);
+		height: floor($size/4.571);
+		background-color: $base-color;
+		@include border-radius(20px);
+	}
+}
+
+/* picon-term */
+.picon-term {
+	width: $size;height: floor($size/1.2);background: transparent;border: floor($size/16) solid $base-color;
+	&::before, &::after{@extend .positions;}
+	&::after {
+		content: '';
+		width: 89%;
+		height: 85%;
+		top: floor($size/16);
+		left: floor($size/16);
+		background: $base-color;
+	}
+	&::before {
+		content: '>_';
+		font-family: 'Dosis';
+		font-size: 1.4rem;
+		color: oppsite-color($base-color);
+		top: -(floor($size/10));
+		left: floor($size/6.4);
+		z-index: 1;
+	}
+}
+
+/* picon-sun */
+.picon-sun {
+	width: $size/2.4;height: $size/2.4;background: transparent;border: $size/10 solid $base-color;@include border-radius(20px);
+	&::before, &::after{@extend .positions;}
+	&::after {
+		content: '';
+		width: 4px;
+		height: 8px;
+		left: 5px;
+		top: -13px;
+		background: $base-color;
+		box-shadow: 0 31px 0 $base-color;
+		@include border-radius(3px);
+	}
+	&::before {
+		content: '';
+		width: 8px;
+		height: 4px;
+		left: -13px;
+		top: 5px;
+		background: $base-color;
+		box-shadow: 31px 0 0 $base-color;
+		@include border-radius(3px);
+	}
 }
